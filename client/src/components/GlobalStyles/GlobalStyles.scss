@@ -1,0 +1,369 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+input,
+select,
+option,
+textarea {
+    outline: none;
+}
+button {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+body {
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Nunito Sans', sans-serif;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+select,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+li:hover > ul {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.shrink {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.active {
+    color: #009688;
+    border-bottom: 3px solid #00bfa5;
+    margin-top: 4px;
+    opacity: 1;
+}
+
+.fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.bg-fill {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center;
+}
+
+.cards {
+    --spacing: 25px;
+    --columns: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+}
+@media screen and (max-width: 1023px) {
+    .cards {
+        --columns: 2;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cards {
+        --spacing: 15px;
+        --columns: 1;
+    }
+}
+
+.card {
+    overflow: hidden;
+    background-color: white;
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+.card-image {
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card-top {
+    padding: 25px;
+}
+.card-title {
+    font-weight: 500;
+    margin-bottom: 9px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.card-user {
+    display: flex;
+    align-items: center;
+}
+.card-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.card-user-info {
+    padding-left: 20px;
+    flex: 1;
+}
+.card-user-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.card-user-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1;
+}
+.card-user-top ion-icon {
+    color: #20e3b2;
+    margin-left: 5px;
+}
+.card-user-game {
+    color: #999;
+    font-weight: 300;
+    font-size: 13px;
+}
+.card-bottom {
+    padding: 25px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-live {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: #ff6651;
+}
+.card-live span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+.card-watching {
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-top {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card-user,
+.card-bottom {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.question label {
+    line-height: 45px;
+    transition: all 0.35s;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.question input[type='radio'] {
+    display: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+}
+.sd-btn {
+    background-color: #fff !important;
+}
+
+.sd-btn--action {
+    background-color: #19b394 !important;
+    &:hover {
+        background-color: #fff !important;
+    }
+}
